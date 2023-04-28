@@ -19,47 +19,47 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "keyboard_fn.h"
 
 const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	KEYMAP_ENC(
-		KC_ESC, KC_Z, \
-		KC_X, KC_C, \
-		KC_MS_WH_DOWN, KC_MS_WH_UP ),
+	KEYMAP(
+		KC_ESC, KC_TAB, KC_CAPS, KC_LSFT, KC_LCTL, 
+		KC_1, KC_Q, KC_A, KC_LGUI, 
+		KC_2, KC_W, KC_S, KC_Z, 
+		KC_3, KC_E, KC_D, KC_X, KC_LALT, 
+		KC_4, KC_R, KC_F, KC_C, 
+		KC_5, KC_T, KC_G, KC_V, KC_SPC, 
+		KC_6, KC_Y, KC_H, KC_B, 
+		KC_7, KC_U, KC_J, KC_N, KC_LSFT, 
+		KC_8, KC_I, KC_K, KC_M, 
+		KC_9, KC_O, KC_L, KC_COMM, KC_LALT, 
+		KC_0, KC_P, KC_SCLN, KC_DOT, KC_FN1, 
+		KC_MINS, KC_LBRC, KC_SLSH, KC_LEFT, 
+		KC_EQL, KC_RBRC, KC_ENT, KC_UP, KC_DOWN, 
+		KC_BSLS, KC_QUOT, KC_1, KC_RGHT, 
+		KC_BSPC, KC_PSTE, KC_5, KC_2, KC_0, 
+		KC_GRV, KC_9, KC_6, KC_3, KC_DEL),
 
-	KEYMAP_ENC(
-		KC_ESC, KC_Z, \
-		KC_X, KC_C, \
-		KC_VOLD, KC_VOLU ),
+	KEYMAP(
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_QUOT, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)
 
-	KEYMAP_ENC(
-		KC_ESC, KC_Z, \
-		KC_X, KC_C, \
-		KC_VOLD, KC_VOLU ),
-
-	KEYMAP_ENC(
-		KC_ESC, KC_Z, \
-		KC_X, KC_C, \
-		KC_VOLD, KC_VOLU ),
-
-	KEYMAP_ENC(
-		KC_ESC, KC_Z, \
-		KC_X, KC_C, \
-		KC_VOLD, KC_VOLU ),
-
-	KEYMAP_ENC(
-		KC_ESC, KC_Z, \
-		KC_X, KC_C, \
-		KC_VOLD, KC_VOLU ),
-
-	KEYMAP_ENC(
-		KC_ESC, KC_Z, \
-		KC_X, KC_C, \
-		KC_VOLD, KC_VOLU ),
-
-	KEYMAP_ENC(
-		KC_ESC, KC_Z, \
-		KC_X, KC_C, \
-		KC_VOLD, KC_VOLU ),
 };
-
 const action_t fn_actions[] = {
-
+    /* Poker Layout */
+    ACTION_LAYER_MOMENTARY(1),  // to Fn overlay
+    ACTION_FUNCTION(KEYBOARD_CONTROL), // sleep
+    ACTION_FUNCTION(SWITCH_DEVICE) // switch between usb and ble
 };
+
